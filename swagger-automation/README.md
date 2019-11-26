@@ -10,7 +10,7 @@ JavaParser.
 **Classes:**
 
 * The FilesToAnnotateFinder class finds the RESTServicesFiles that it should add annotations to. It determines this by 
-searching for an @Path annotation. If a file include this annotation, it will be added to the list of RESTServicesFiles to be 
+searching for an @Path annotation. If a file includes this annotation, it will be added to the list of RESTServicesFiles to be 
 annotated.
 
 * The FileBuilder class iterates through the RESTServicesFiles to be annotated and adds any required annotations that do not already 
