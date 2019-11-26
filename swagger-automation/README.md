@@ -94,13 +94,13 @@ Error Case Example)
      */
      //TODO: This todo comment will cause an error.
     @GET
-    @Path("/isregistered/{registrationKey}")
+    @Path("/getId/{registrationKey}")
     @Produces(MediaType.APPLICATION_JSON)
     @StatusCodes({@ResponseCode(code = 200, condition = "Success"), @ResponseCode(code = 400, condition =
             "required parameter is not provided in the request," +
-                    "or the location with a free device cannot be found"),
+                    "or the student cannot be found"),
             @ResponseCode(code = 404, condition = "Not found")})
-    public void isRegister(String str){
+    public void getStudentId(String str){
 
     }
     
@@ -111,13 +111,13 @@ Valid Case Example)
      * @param str The string to be used
      */
     @GET
-    @Path("/isregistered/{registrationKey}")
+    @Path("/getId/{registrationKey}")
     @Produces(MediaType.APPLICATION_JSON)
     @StatusCodes({@ResponseCode(code = 200, condition = "Success"), @ResponseCode(code = 400, condition =
             "required parameter is not provided in the request," +
-                    "or the location with a free device cannot be found"),
+                    "or the student cannot be found"),
             @ResponseCode(code = 404, condition = "Not found")})
-    public void isRegister(String str){
+    public void getStudentId(String str){
 
     }
 
@@ -130,13 +130,13 @@ Input File Example)
      * @param int1 The integer to be used
      */
     @GET
-    @Path("/isregistered/{registrationKey}")
+    @Path("/getId/{registrationKey}")
     @Produces(MediaType.APPLICATION_JSON)
     @StatusCodes({@ResponseCode(code = 200, condition = "Success"), @ResponseCode(code = 400, condition =
             "required parameter is not provided in the request," +
-                    "or the location with a free device cannot be found"),
+                    "or the student cannot be found"),
             @ResponseCode(code = 404, condition = "Not found")})
-    public void isRegister(String str1, Integer int1){
+    public void getStudentId(String str1){
 
     }
 
@@ -146,9 +146,9 @@ Input File Example)
      * @param int1 The integer to be used
      */
     @PUT
-    @Path("/isregistered/{registrationKey}")
+    @Path("/test/{registrationKey}")
     @Produces(MediaType.APPLICATION_JSON)
-    public void toTest(String parameter, Integer int1){
+    public void toTestMethod(String parameter, Integer int1){
         String test = parameter;
     }
 }
@@ -161,13 +161,13 @@ Output File Example)
      * @param int1 The integer to be used
      */
     @GET
-    @Path("/isregistered/{registrationKey}")
+    @Path("/getId/{registrationKey}")
     @Produces(MediaType.APPLICATION_JSON)
     @Operation(description = "This method is to be used for testing only.")
     @ApiResponse(responseCode = "200", description = "Success")
     @ApiResponse(responseCode = "400", description = "required parameter is not provided in the request,  or the location with a free device cannot be found")
     @ApiResponse(responseCode = "404", description = "Not found")
-    public void isRegister(@Parameter(description = "The string to be used", schema = @Schema(type = "String")) String str1, @Parameter(description = "The integer to be used", schema = @Schema(type = "Integer")) Integer int1) {
+    public void getStudentId(@Parameter(description = "The string to be used", schema = @Schema(type = "String")) String str1, @Parameter(description = "The integer to be used", schema = @Schema(type = "Integer")) Integer int1) {
     }
 
     /**
@@ -181,7 +181,7 @@ Output File Example)
     @Path("/isregistered/{registrationKey}")
     @Produces(MediaType.APPLICATION_JSON)
     @Operation(description = "This method is used for testing.")
-    public void toTest(@Parameter(description = "The string to be used", schema = @Schema(type = "String")) String parameter, @Parameter(description = "The integer to be used", schema = @Schema(type = "Integer")) Integer int1) {
+    public void toTestMethod(@Parameter(description = "The string to be used", schema = @Schema(type = "String")) String parameter, @Parameter(description = "The integer to be used", schema = @Schema(type = "Integer")) Integer int1) {
         String test = parameter;
     }
 }
